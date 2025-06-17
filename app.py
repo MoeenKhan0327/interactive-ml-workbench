@@ -37,7 +37,7 @@ if uploaded_file is not None:
             y = df[target_col]
             X = pd.get_dummies(X)
             X = X.dropna()
-            y = y.loc.[X.index]
+            y = y.loc[X.index]
             if y.dtype == 'object':
                 y = pd.factorize(y)[0]
             if y.isnull().sum() > 0:
