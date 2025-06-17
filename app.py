@@ -58,7 +58,7 @@ if uploaded_file is not None:
                     model.fit(X_train, y_train)
                     preds = model.predict(X_test)
                     acc = accuracy_score(y_test, preds)
-                    st.success(f"✅ {selected_model[0]} Accuracy: {round(acc*100, 2)}%")
+                    st.success(f"✅ {selected_models[0]} Accuracy: {round(acc*100, 2)}%")
                 else:
                     try:
                         ensemble = VotingClassifier(
