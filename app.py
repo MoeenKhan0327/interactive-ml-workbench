@@ -68,7 +68,7 @@ if uploaded_file is not None:
                         ensemble.fit(X_train, y_train)
                         preds = ensemble.predict(X_test)
                         acc = accuracy_score(y_test, preds)
-                        names = ", ",join(selected_models)
+                        names = ", ".join(selected_models)
                         st.success(f"✅ Ensemble of [{names}] Accuracy: {round(acc*100, 2)}%")
                     except Exception as e:
                         st.error(f"⚠️ Cannot combine selected models. Error: {str(e)}")
