@@ -46,7 +46,7 @@ if uploaded_file is not None:
             else:
                 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
                 model_map = {
-                    "Logistic Regression": LogisticRegression(max_iter=1000),
+                    "Logistic Regression": LogisticRegression(max_iter=500),
                     "Decision Tree": DecisionTreeClassifier(),
                     "Random Forest": RandomForestClassifier(n_estimators=rf_n_estimators),
                     "Naive Bayes": GaussianNB(),
